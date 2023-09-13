@@ -17,6 +17,9 @@ class FizzBuzzTest extends PHPUnit\Framework\TestCase
         $fizzBuzz = new FizzBuzz();
         $result = $fizzBuzz->print(3);
         $this->assertEquals('Fizz', $result);
+
+        $result = $fizzBuzz->print(6);
+        $this->assertEquals('Fizz', $result);
     }
 
 }
