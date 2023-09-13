@@ -2,8 +2,8 @@
 
 class FizzBuzz
 {
-    public function print(): string
+    public function print(int $number): string
     {
-        throw new Exception();
+        return (string) $number;
     }
 }
