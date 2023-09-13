@@ -9,6 +9,10 @@ class FizzBuzz
 
     public function print(int $number): string
     {
+        if (($number % self::FizzMultiplier === 0) && ($number % self::BuzzMultiplier === 0)) {
+            return 'FizzBuzz';
+        }
+
         if ($number % self::FizzMultiplier === 0) {
             return 'Fizz';
         }
