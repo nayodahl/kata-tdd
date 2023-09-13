@@ -31,4 +31,14 @@ class FizzBuzzTest extends PHPUnit\Framework\TestCase
         $result = $fizzBuzz->print(10);
         $this->assertEquals('Buzz', $result);
     }
+
+    public function testThatReturnFizzBuzzWhenMultipleOfThreeAndFive(): void
+    {
+        $fizzBuzz = new FizzBuzz();
+        $result = $fizzBuzz->print(15);
+        $this->assertEquals('FizzBuzz', $result);
+
+        $result = $fizzBuzz->print(30);
+        $this->assertEquals('FizzBuzz', $result);
+    }
 }
