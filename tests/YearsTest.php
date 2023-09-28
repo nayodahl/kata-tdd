@@ -47,4 +47,16 @@ class YearsTest extends PHPUnit\Framework\TestCase
         $year = new Years(2016);
         $this->assertTrue($year->isLeap());
     }
+
+    public function testYearNotDivisibleBy4IsNotLeap()
+    {
+        $year = new Years(2017);
+        $this->assertFalse($year->isLeap());
+
+        $year = new Years(2018);
+        $this->assertFalse($year->isLeap());
+
+        $year = new Years(2019);
+        $this->assertFalse($year->isLeap());
+    }
 }
