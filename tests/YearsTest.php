@@ -20,4 +20,19 @@ class YearsTest extends PHPUnit\Framework\TestCase
         $year = new Years(2000);
         $this->assertTrue($year->isLeap());
     }
+
+    public function testYearDivisibleBy100ButNotBy400IsNotLeap()
+    {
+        $year = new Years(1700);
+        $this->assertFalse($year->isLeap());
+
+        $year = new Years(1800);
+        $this->assertFalse($year->isLeap());
+
+        $year = new Years(1900);
+        $this->assertFalse($year->isLeap());
+
+        $year = new Years(2100);
+        $this->assertFalse($year->isLeap());
+    }
 }
